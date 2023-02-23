@@ -1,25 +1,26 @@
 class ListView {
     studentListElement = document.querySelector('#studentList');
 
-    constructor(options) {
-        this.options = options;
+    constructor() {
+        // this.options = options;
         this.root = this.initView();
     }
 
     initView() {
+        console.log('start list')
         this.renderList();
-        return `
-        <table id="listTable">
-            <tr>
-                <th>Name</th>
-                <th colspan="10">Marks</th>
-                <th>Actions</th>
-            </tr>
-            <tbody id="studentList">
-
-            </tbody>
-        </table>
-        `;
+        // return `
+        // <table id="listTable">
+        //     <tr>
+        //         <th>Name</th>
+        //         <th colspan="10">Marks</th>
+        //         <th>Actions</th>
+        //     </tr>
+        //     <tbody id="studentList">
+        //
+        //     </tbody>
+        // </table>
+        // `;
     }
 
     appendTo(container) {

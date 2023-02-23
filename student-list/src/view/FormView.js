@@ -2,8 +2,8 @@ class FormView {
     // static INPUTS_SELECTOR = 'input, textarea';
     studentFormElement = document.querySelector('#studentForm');
 
-    constructor(options) {
-        this.options = options;
+    constructor() {
+        // this.options = options;
         this.root = this.initView();
         this.$inputs = this.root.find(this.studentFormElement);
     }

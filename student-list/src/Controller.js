@@ -1,16 +1,20 @@
 import Collection from "./model/Collection.js";
 
-class Controller {
+export default class Controller {
 
     constructor(root) {
         this.root = root;
         this.collection = new Collection();
-        this.formView = new FormView({
-            // onSubmit: todo => this.save(todo)
-        });
-        this.listView = new ListView({
+        this.listView = new ListView();
+            // {
             // onEdit: id => this.formView.setFormData(this.collection.get(id))
-        });
+        // }
+        // );
+        this.formView = new FormView(
+            // {
+            // onSubmit: todo => this.save(todo)
+        // }
+        );
 
 
         this.listView.appendTo(this.root);
