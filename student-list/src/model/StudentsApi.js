@@ -47,4 +47,4 @@ class StudentsApi {
     }
 }
 
-// export default StudentsApi;
+export default StudentsApi;

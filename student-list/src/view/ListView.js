@@ -1,15 +1,13 @@
-// const studentListElement = document.querySelector('#studentList');
-
 class ListView {
     studentListElement = document.querySelector('#studentList');
 
-    constructor() {
-        // this.options = options;
+    constructor(options) {
+        this.options = options;
         this.root = this.initView();
     }
 
     initView() {
-        // this.renderList();
+        this.renderList();
         return `
         <table id="listTable">
             <tr>
@@ -18,7 +16,7 @@ class ListView {
                 <th>Actions</th>
             </tr>
             <tbody id="studentList">
-    
+
             </tbody>
         </table>
         `;
@@ -32,6 +30,12 @@ class ListView {
         const html = list.map(this.generateStudentHtml).join('');
 
         this.studentListElement.innerHTML = html;
+    }
+
+    renderOne(student) {
+        const html = this.generateStudentHtml(student);
+
+        this.studentListElement.insertAdjacentHTML('beforeend', html)
     }
 
     generateStudentHtml(student) {
